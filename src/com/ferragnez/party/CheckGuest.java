@@ -15,11 +15,23 @@ public class CheckGuest {
         boolean isGuest = false;
 
         // FOR
-        for (int i = 0; i < guests.length; i++) {
+        // for (int i = 0; i < guests.length; i++) {
 
-            if (guestName.equals(guests[i].toLowerCase())) {
+        // if (guestName.equals(guests[i].toLowerCase())) {
+        // isGuest = true;
+        // break;
+        // }
+        // }
+
+        int index = 0;
+
+        // WHILE
+        while (index < guests.length) {
+            if (guestName.equals(guests[index].toLowerCase())) {
                 isGuest = true;
                 break;
+            } else {
+                index++;
             }
         }
 
