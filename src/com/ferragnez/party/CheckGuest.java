@@ -26,14 +26,24 @@ public class CheckGuest {
         int index = 0;
 
         // WHILE
-        while (index < guests.length) {
+        // while (index < guests.length) {
+        // if (guestName.equals(guests[index].toLowerCase())) {
+        // isGuest = true;
+        // break;
+        // } else {
+        // index++;
+        // }
+        // }
+
+        // DO WHILE
+        do {
             if (guestName.equals(guests[index].toLowerCase())) {
                 isGuest = true;
                 break;
             } else {
                 index++;
             }
-        }
+        } while (index < guests.length);
 
         String response = isGuest ? "Accesso consentito!" : "Accesso negato!";
         System.out.println(response);
