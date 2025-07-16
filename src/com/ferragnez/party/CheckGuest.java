@@ -15,35 +15,32 @@ public class CheckGuest {
         boolean isGuest = false;
 
         // FOR
-        // for (int i = 0; i < guests.length; i++) {
+        for (int i = 0; !isGuest && i < guests.length; i++) {
 
-        // if (guestName.equals(guests[i].toLowerCase())) {
-        // isGuest = true;
-        // break;
-        // }
-        // }
+            if (guestName.equals(guests[i].toLowerCase())) {
+                isGuest = true;
+            }
+        }
 
-        int index = 0;
+        // int index = 0;
 
         // WHILE
-        // while (index < guests.length) {
+        // while (!isGuest && index < guests.length) {
         // if (guestName.equals(guests[index].toLowerCase())) {
         // isGuest = true;
-        // break;
         // } else {
         // index++;
         // }
         // }
 
         // DO WHILE
-        do {
-            if (guestName.equals(guests[index].toLowerCase())) {
-                isGuest = true;
-                break;
-            } else {
-                index++;
-            }
-        } while (index < guests.length);
+        // do {
+        // if (guestName.equals(guests[index].toLowerCase())) {
+        // isGuest = true;
+        // } else {
+        // index++;
+        // }
+        // } while (!isGuest && index < guests.length);
 
         String response = isGuest ? "Accesso consentito!" : "Accesso negato!";
         System.out.println(response);
